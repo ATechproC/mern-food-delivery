@@ -15,7 +15,7 @@ const Hero = () => {
                         Officia qui voluptates eveniet recusandae fuga omnis laudantium asperiores ex minima magnam.
                     </span>
                 </p>
-                <button className='bg-white font-semibold px-3 py-2 rounded-full text-gray-500 w-[200px]'>View Menu</button>
+                <a href='#menu'  className='bg-white text-center font-semibold px-3 py-2 rounded-full text-gray-500 w-[200px] cursor-pointer'>View Menu</a>
             </div>
         </div>
     </div>

@@ -7,6 +7,7 @@ import MobileApp from "./pages/MobileApp";
 import Contact from "./pages/Contact";
 import Footer from './components/Footer';
 import SignModal from './components/SignModal';
+import Delivery from './pages/Delivery';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='menu' element={<Menu />} />
           <Route path='mobile-app' element={<MobileApp />} />
           <Route path='contact' element={<Contact />} />
+          <Route path='delivery' element={<Delivery />} />
         </Route>
       </Route>
     )

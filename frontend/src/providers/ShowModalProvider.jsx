@@ -17,4 +17,6 @@ const ShowModalProvider = ({ children }) => {
 
 export default ShowModalProvider;
 
-export const useShowModal = () => useContext(ShowModelContext);
+export const useShowModal = () => {
+    return useContext(ShowModelContext)
+};

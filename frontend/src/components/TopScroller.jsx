@@ -8,15 +8,23 @@ const TopScroller = () => {
     const handleScrollerButton = () => {
         window.scrollTo({
             top: 0,
-            behavior : 'smooth'
+            behavior: 'smooth'
         })
     }
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (scrollY > 600) setIsShow(true);
+
+        const handleScrolling = () => {
+            if (window.scrollY > 600) setIsShow(true);
             else setIsShow(false)
-        })
+        }
+
+        window.addEventListener("scroll", handleScrolling);
+
+        return () => {
+            window.removeEventListener("scroll", handleScrolling)
+        }
+
     }, []);
 
     return isShow &&

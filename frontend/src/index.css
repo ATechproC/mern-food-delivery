@@ -10,6 +10,10 @@
         font-family: sans-serif;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         height: 100vh;
     }
@@ -33,10 +37,49 @@
     }
 
     .input-style {
-    @apply px-3 py-1 rounded border-[2px] border-gray-500 capitalize
+        @apply px-3 py-1 rounded border-[2px] border-gray-500 
+    }
+}
+
+@layer components {
+    .open-model {
+        animation: openModel .2s linear forwards;
+    }
+
+    .close-model {
+        animation: closeModel .2s linear forwards;
+    }
+}
+
+@keyframes opeModel {
+    0% {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    100% {
+        opacity: 1;
+        pointer-events: default;
+    }
+}
+
+@keyframes closeModel {
+    0% {
+        opacity: 1;
+        pointer-events: default;
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none;
     }
 }
 
 a.active {
     color: #ff4500;
+}
+
+tr,
+td {
+    border: 2px solid gray;
 }
