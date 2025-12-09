@@ -1,0 +1,24 @@
+import React from 'react'
+import { assets } from "../assets/frontend_assets/assets"
+
+const Hero = () => {
+    return <div className='relative'>
+        <img src={assets.header_img} draggable={false} />
+        <div className='absolute left-5 bottom-10 w-[50%]'>
+            <div className='flex flex-col gap-10 text-white'>
+                <h1 className='text-[55px] font-bold '>Order your faourite food here</h1>
+                <p className='text-[18px] font-bold'>
+                    <span className='block whitespace-nowrap'>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                    <span className='block whitespace-nowrap'>
+                        Officia qui voluptates eveniet recusandae fuga omnis laudantium asperiores ex minima magnam.
+                    </span>
+                </p>
+                <button className='bg-white font-semibold px-3 py-2 rounded-full text-gray-500 w-[200px]'>View Menu</button>
+            </div>
+        </div>
+    </div>
+}
+
+export default Hero

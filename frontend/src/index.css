@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body {
+        height: 100vh;
+    }
+}
+
+@layer utilities {
+    .flex-center {
+        @apply flex items-center justify-center
+    }
+
+    .flex-between {
+        @apply flex items-center justify-between
+    }
+
+    .flex-items {
+        @apply flex items-center;
+    }
+
+    .flex-column {
+        @apply flex items-center flex-col
+    }
+
+    .input-style {
+    @apply px-3 py-1 rounded border-[2px] border-gray-500 capitalize
+    }
+}
+
+a.active {
+    color: #ff4500;
+}
