@@ -37,11 +37,12 @@
     }
 
     .input-style {
-        @apply px-3 py-1 rounded border-[2px] border-gray-500 
+        @apply px-3 py-1 rounded border-[2px] border-gray-500
     }
 }
 
-@layer components {
+/* @layer components {
+    
     .open-model {
         animation: openModel .2s linear forwards;
     }
@@ -49,9 +50,10 @@
     .close-model {
         animation: closeModel .2s linear forwards;
     }
-}
+    
+} */
 
-@keyframes opeModel {
+/* @keyframes opeModel {
     0% {
         opacity: 0;
         pointer-events: none;
@@ -61,9 +63,9 @@
         opacity: 1;
         pointer-events: default;
     }
-}
+} */
 
-@keyframes closeModel {
+/* @keyframes closeModel {
     0% {
         opacity: 1;
         pointer-events: default;
@@ -73,7 +75,7 @@
         opacity: 0;
         pointer-events: none;
     }
-}
+} */
 
 a.active {
     color: #ff4500;

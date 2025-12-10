@@ -44,10 +44,10 @@ const SignModal = () => {
     return <>
         <div
             onClick={() => setIsShow(false)}
-            className={`fixed z-20 w-[100%] h-[100%] backdrop-blur-sm ${isShow ? "open-model" : "close-model"}`} />
+            className={`fixed z-20 w-[100%] h-[100%] backdrop-blur-sm ${isShow ? "block" : "hidden"} duration-300 translate-all`} />
         <form
             onSubmit={onSubmitHandler}
-            className={`z-30 w-[400px] fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded ${isShow ? "open-model" : "close-model"}`}>
+            className={`z-30 w-[400px] fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded ${isShow ? "block" : "hidden"} duration-300 transition-all`}>
             <FaTimes
                 onClick={() => setIsShow(false)}
                 className='absolute right-5 top-3 text-main_color text-[20px] cursor-pointer' />

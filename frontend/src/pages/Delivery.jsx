@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { assets } from '../assets/frontend_assets/assets'
 import { FaTimes } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
 const Delivery = () => {
+
+    const navigate = useNavigate();
+
+    const [promoCode, setPromoCode] = useState("");
+
     return <div className='my-8'>
         <table className='w-full my-8 text-center border-2 border-gray-600'>
             <thead className='font-bold'>
                 <tr>
-                    <td>Plate</td>
-                    <td>Title</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Total</td>
-                    <td>Remove</td>
+                    <td className='max-sm:text-[10px]'>Plate</td>
+                    <td className='max-sm:text-[10px]'>Title</td>
+                    <td className='max-sm:text-[10px]'>Price</td>
+                    <td className='max-sm:text-[10px]'>Quantity</td>
+                    <td className='max-sm:text-[10px]'>Total</td>
+                    <td className='max-sm:text-[10px]'>Remove</td>
                 </tr>
             </thead>
             <tbody>
@@ -25,7 +31,7 @@ const Delivery = () => {
                     <td>10</td>
                     <td>700$</td>
                     <td>
-                        <FaTimes className='mx-auto' cursor={"pointer"} />
+                        <FaTimes className='mx-auto max-sm:text-[10px]' cursor={"pointer"} />
                     </td>
                 </tr>
                 <tr>
@@ -37,13 +43,13 @@ const Delivery = () => {
                     <td>10</td>
                     <td>700$</td>
                     <td>
-                        <FaTimes className='mx-auto' cursor={"pointer"} />
+                        <FaTimes className='mx-auto  max-sm:text-[10px]' cursor={"pointer"} />
                     </td>
                 </tr>
             </tbody>
         </table>
-        <div className='flex justify-between w-full'>
-            <div className='w-[400px]'>
+        <div className='flex justify-between w-full max-sm:gap-5 max-sm:flex-column'>
+            <div className='md:w-[400px] w-full'>
                 <h2 className='text-[25px] font-bold mb-1'>Cart Totals</h2>
                 <div className='flex flex-col gap-2'>
                     <div className='flex-between'>
@@ -61,13 +67,16 @@ const Delivery = () => {
                         <span>110$</span>
                     </div>
                 </div>
-                <button className='px-5 py-1 my-3 font-bold text-white rounded bg-main_color'>PROCEED TO CHECKOUT</button>
+                <button
+                    onClick={() => navigate("/delivery-info")}
+                    className='px-5 py-1 my-3 font-bold text-white rounded bg-main_color whitespace-nowrap'>PROCEED TO CHECKOUT</button>
             </div>
             <div className='mt-5'>
                 <p className='text-gray-500'>If you have a promo code. Enter it here</p>
-                <div className='gap-4 mt-2 flex-items'>
-                    <input type='text' className='bg-gray-200 input-style w-[400px]' />
-                    <button className='px-5 py-1 font-bold text-white bg-black rounded'>Submit</button>
+                <div className='gap-4 mt-2 flex-items max-sm:flex-column'>
+                    <input value={promoCode} onChange={(e) => setPromoCode(e.target.value)} type='text' className='bg-gray-200 input-style md:w-[400px] max-sm:w-[300px]' />
+                    <button
+                        className='px-5 py-1 font-bold text-white bg-black rounded'>Submit</button>
                 </div>
             </div>
         </div>

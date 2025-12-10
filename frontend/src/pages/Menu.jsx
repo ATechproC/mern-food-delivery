@@ -3,11 +3,11 @@ import { menu_list } from '../assets/frontend_assets/assets'
 
 const Menu = () => {
     return <div id='menu' className='gap-10 my-8 flex-column'>
-        <h2 className='text-[50px] font-bold'>Explor our menu</h2>
-        <p className='text-gray-500 text-[18px] w-[60%] text-center'>
+        <h2 className='md:text-[50px] text-[30px] font-bold'>Explor our menu</h2>
+        <p className='text-gray-500 text-[18px] max-sm:text-[15px] md:w-[60%] text-center max-sm:-mt-8'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur est dolorum aut aliquid optio. Quia omnis similique illo placeat.
         </p>
-        <div className='gap-10 flex-items'>
+        <div className='gap-10 overflow-x-auto flex-items max-sm:grid max-sm:grid-cols-2'>
             {
                 menu_list.map(({ _id, menu_name, menu_image }) => {
                     return <div key={_id} className='gap-6 flex-column'>

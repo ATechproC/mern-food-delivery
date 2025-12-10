@@ -6,10 +6,9 @@ import ToTop from '../components/TopScroller'
 
 const Home = () => {
     return <>
-    <ToTop />
+        <ToTop />
         <Hero />
         <Menu />
-        {/* <hr className='bg-gray-400 my-5 h-[4px] w-[90%] mx-auto rounded-full' /> */}
         <TopOrders />
     </>
 }

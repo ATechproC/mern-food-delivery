@@ -29,7 +29,7 @@ const TopScroller = () => {
 
     return isShow &&
         <div onClick={handleScrollerButton}
-            className='fixed right-4 bottom-4 bg-orange-600 w-[40px] h-[40px] flex-center rounded-[10px] cursor-pointer'>
+            className='fixed z-[10] right-4 bottom-4 bg-orange-600 w-[40px] h-[40px] flex-center rounded-[10px] cursor-pointer'>
             <FaArrowUp size={20} color='#fff' />
         </div>
 

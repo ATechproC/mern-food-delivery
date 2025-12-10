@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "server:prod": "cross-env NODE_ENV=production node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cross-env": "^10.1.0",
+    "express": "^5.2.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^9.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.3",
+    "morgan": "^1.10.1"
+  }
+}

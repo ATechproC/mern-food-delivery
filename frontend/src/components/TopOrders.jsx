@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { food_list } from '../assets/frontend_assets/assets'
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import { useAppProvider } from '../providers/AppProvider';
 
 const TopOrders = () => {
 
     const [foodList, setFoodList] = useState(food_list);
-    const { setCounterNotification } = useAppProvider();
 
     const handleShowCounter = (id) => {
         const newArray = [...food_list];
@@ -51,11 +49,11 @@ const TopOrders = () => {
     // }, [foodList]);
 
     return <div>
-        <h2 className='text-[50px] font-bold my-8 text-center'>Top dishes for you </h2>
+        <h2 className='md:text-[50px] max-sm:text-[25px] font-bold my-8 text-center'>Top dishes for you </h2>
         <div className='grid grid-cols-1 gap-2 text-center md:grid-cols-4'>
             {
-                foodList.map(({ _id, name, image, price, description, category, showCounter, counter }) => {
-                    return <div key={_id} className='bg-gray-100 md:w-[250px] flex-column gap-5 rounded-[10px] hover:-translate-y-2 duration-300 transition cursor-default mx-auto w-[300px] mt-3'>
+                foodList.slice(0, 1).map(({ _id, name, image, price, description, category, showCounter, counter }) => {
+                    return <div key={_id} className='bg-gray-100 md:w-[250px] flex-column gap-5 rounded-[10px] md:hover:-translate-y-2 duration-300 transition cursor-default mx-auto w-[300px] mt-3'>
                         <div className='relative w-full rounded-[10px] overflow-hidden cursor-pointer'>
                             <img src={image} className='object-contain w-full h-full' draggable={false} />
                             {
